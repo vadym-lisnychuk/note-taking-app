@@ -33,18 +33,24 @@ public class MainWindow extends JFrame
         mainPanel.setBackground(Color.DARK_GRAY);
         
         sideBarPanel = new JPanel();
-        sideBarPanel.setPreferredSize(new Dimension(200, 600));
+        sideBarPanel.setPreferredSize(new Dimension(185, 600));
         sideBarPanel.setBackground(Color.LIGHT_GRAY);
 
         
-        // IMPORTRANT TO KEEP THE LAST
+        // adding
         this.add(mainPanel, BorderLayout.CENTER);
         this.add(sideBarPanel, BorderLayout.WEST);
+        
+        // IMPORTRANT TO KEEP THE LAST
         this.setVisible(true);
     }
     
     // View method for getting text
-    public String getNoteText() {
+    public String getTextAreaContent() {
         return textArea.getText();
+    }
+
+    public void setTextAreaContent(String text){
+        textArea.setText(text);
     }
 }

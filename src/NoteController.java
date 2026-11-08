@@ -8,10 +8,17 @@ public class NoteController {
     }
 
     public void saveNote() {
-        model.saveNote(view.getNoteText());
+        model.saveNote(view.getTextAreaContent());
     }
 
     public void newNote(){ 
         model.newNote();
+        
+        String lastNoteContent = model.getLastNote().getContent();
+        view.setTextAreaContent(lastNoteContent);
+    }
+
+    public void updateTextArea(String text){ 
+        view.setTextAreaContent(text);
     }
 }

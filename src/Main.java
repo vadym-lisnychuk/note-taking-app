@@ -7,6 +7,9 @@ public class Main{
             NoteModel model = new NoteModel();
             NoteController controller = new NoteController(view, model);
             view.setJMenuBar(new MainWindowMenuBar(controller));
+
+
+            view.setTextAreaContent("hello world");
         });
     }
 }
