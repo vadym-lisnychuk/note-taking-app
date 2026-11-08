@@ -1,16 +1,16 @@
 import javax.swing.JFrame;
 
 public class RemindersWindow extends JFrame{
-    private static final int MainWindowWidth = 400;
-    private static final int MainWindowHeight = 600;
-    private static final String MainWindowTitle = "Reminders";
+    // Default values
+    private static final int windowWidth = 400;
+    private static final int windowHeight = 600;
+    private static final String windowTitle = "Reminders";
 
     RemindersWindow(){
-        this.setSize(MainWindowWidth, MainWindowHeight);
+        this.setSize(windowWidth, windowHeight);
         this.setLocationRelativeTo(null);
-        this.setTitle(MainWindowTitle);
+        this.setTitle(windowTitle);
         this.setResizable(false);
-
         this.setVisible(false);
     }
 }

@@ -1,6 +1,12 @@
-public class Main{
-    void main() {
-        MainWindow mw = new MainWindow();
+import javax.swing.SwingUtilities;
 
+public class Main{
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            MainWindow view = new MainWindow();
+            NoteModel model = new NoteModel();
+            NoteController controller = new NoteController(view, model);
+            view.setJMenuBar(new MainWindowMenuBar(controller));
+        });
     }
 }
