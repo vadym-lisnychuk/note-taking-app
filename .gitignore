@@ -28,3 +28,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+# Local reminder data
+.REMINDERS.txt
+.reminders-*.tmp

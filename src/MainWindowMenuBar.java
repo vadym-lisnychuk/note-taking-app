@@ -11,11 +11,8 @@ public class MainWindowMenuBar extends JMenuBar
     private JMenu remindersButton;
     private JMenuItem openReminders;
 
-    // rw instance to control its appereance
-    private RemindersWindow rw;
-
     public MainWindowMenuBar(NoteController controller) {
-        rw = new RemindersWindow();
+        ReminderController reminders = new ReminderController(new RemindersWindow());
 
         // new note
         newNote = new JMenuItem("New");
@@ -46,7 +43,7 @@ public class MainWindowMenuBar extends JMenuBar
         remindersButton.setMnemonic(KeyEvent.VK_R);
         openReminders = new JMenuItem("Open");
         openReminders.setMnemonic(KeyEvent.VK_O);
-        openReminders.addActionListener(e -> rw.setVisible(true));
+        openReminders.addActionListener(e -> reminders.open());
 
         remindersButton.add(openReminders);
         this.add(remindersButton);
